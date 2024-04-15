@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sedan;
+  color: white;
+}
+
+header {
+  background: #222831;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 18px;
+}
+.logo img {
+  width: 5rem;
+  border-radius: 4px;
+}
+.nav-list {
+  flex-basis: 50%;
+}
+.nav-list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+}
+ul a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in;
+}
+ul li:not(:last-child) a:hover,
+ul li a.active {
+  text-decoration: underline 2px;
+  text-underline-offset: 8px;
+  color: blueviolet;
+  text-decoration-color: white;
+}
+.btn {
+  font-weight: bolder;
+  background-color: blueviolet;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+.btn:hover {
+  background-color: rgba(137, 43, 226, 0.632);
+}
+.hamburger {
+  font-size: 30px;
+  display: none;
+}
+@media screen and (max-width: 754px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-list ul {
+    display: none;
+  }
+  ul.ham_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #222831ef;
+    width: 100%;
+    gap: 20px;
+    padding: 10px 0px;
+    
+  }
+}
